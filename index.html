@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG path-2</title>
+
+    <style>
+        .child-main {
+            width: 600px;
+            height: 600px;
+            background-color: gray;
+            margin: auto;
+            margin-top: 40px;
+            border: 2px solid red;
+        }
+
+        path {
+            stroke-linecap: round;
+            stroke-dasharray: 30;
+            animation: svgAni 4s ease-in-out 0s infinite alternate;
+            stroke: rgb(253, 25, 25);
+        }
+        
+        @keyframes svgAni {
+            0% {
+                stroke-dasharray: 30;
+            }
+
+            50% {
+                stroke: yellow;
+                stroke-linecap: square;
+            }
+
+            100% {
+                stroke-dasharray: 740;
+                stroke: rgb(5, 255, 5);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="child-main">
+
+        <svg viewBox="0 0 100 100">
+            <path
+                d="M20,50 L80,50 L80,70 L20,70 L20,40 L80,30 L20,70 L80,50 L20,40 L63,50 L20,70 L56,46 L55,40 L80,30 L80,50 L42,34 L20,50 L80,69.5 Z"
+                stroke="red" fill="none"></path>
+        </svg>
+
+    </div>
+
+</body>
+
+</html>
